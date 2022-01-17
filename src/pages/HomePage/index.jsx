@@ -76,6 +76,7 @@ const HomePage = () => {
                 itemComponent="span"
                 gutterWidth={18}
                 gutterHeight={18}
+                monitorImagesLoaded={true}
             >
                 {
                     pictures.map(picture => (
@@ -89,7 +90,7 @@ const HomePage = () => {
                 }
             </StackGrid>
         </InfiniteScroll>
-        <Outlet />
+        <Outlet/>
     </React.Fragment>;
 }
 
