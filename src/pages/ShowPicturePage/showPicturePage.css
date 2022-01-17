@@ -1,0 +1,56 @@
+.modal-picture-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-picture-container img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal-picture-title {
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    margin-top: 1.5rem;
+    font-size: 24px;
+    background-color: rgba(145, 145, 145, 0.11);
+    text-align: center;
+}
+
+.modal-picture-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.modal-picture-details-item {
+    margin: 0 0.75rem 0.75rem 0;
+    background-color: #212121;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.modal-picture-details-item-title {
+    background-color: #c04041;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.75rem;
+    padding: 0.25rem 1rem;
+}
+
+.modal-picture-details-item-title span {
+}
