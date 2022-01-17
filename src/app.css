@@ -1,11 +1,10 @@
-.infinite-scroll-container{
+.infinite-scroll-container {
     padding-top: 5rem;
 }
 
 .infinite-scroll-component {
     overflow: visible !important;
 }
-
 
 body {
     background-color: black;
@@ -15,4 +14,61 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.react-modal-container {
+    width: 700px !important;
+    background-color: black !important;
+    border: none !important;
+    border-radius: 15px !important;
+    z-index: 8888;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem 0;
+    padding: 2rem;
+}
+
+.react-modal-overlay {
+    position: fixed;
+    border: none !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 9, 9, 0.91);
+    z-index: 8888;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+
+.ReactModal__Content {
+    transform: scale(0.95);
+    transition: transform 100ms ease-in-out;
+}
+
+.ReactModal__Content--after-open {
+    transform: scale(1);
+}
+
+.ReactModal__Content--before-close {
+    transform: scale(0.95);
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
 }
