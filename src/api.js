@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fetchPictures = async (limit, offset) => {
     try {
-        const pictures = await axios.get("https://onlineartdatabase.pythonanywhere.com/api/", {
+        const pictures = await axios.get("https://onlineartdatabase.pythonanywhere.com/", {
             params: {
                 format: "json",
                 limit,
@@ -18,7 +18,7 @@ export const fetchPictures = async (limit, offset) => {
 
 export const fetchPicture = async (id) => {
     try {
-        const pictures = await axios.get(`https://onlineartdatabase.pythonanywhere.com/api/${id}`, {
+        const pictures = await axios.get(`https://onlineartdatabase.pythonanywhere.com/${id}`, {
             params: {
                 format: "json",
             }
