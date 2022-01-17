@@ -1,0 +1,18 @@
+.infinite-scroll-container{
+    padding-top: 5rem;
+}
+
+.infinite-scroll-component {
+    overflow: visible !important;
+}
+
+
+body {
+    background-color: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
