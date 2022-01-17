@@ -16,4 +16,17 @@ export const fetchPictures = async (limit, offset) => {
     }
 }
 
+export const fetchPicture = async (id) => {
+    try {
+        const pictures = await axios.get(`https://onlineartdatabase.pythonanywhere.com/api/${id}`, {
+            params: {
+                format: "json",
+            }
+        });
+        return pictures.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 
