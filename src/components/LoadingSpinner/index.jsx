@@ -1,5 +1,5 @@
 import React from "react";
-import loadingSpinnerImg from "../../assets/Rolling-1s-200px.svg";
+import loadingSpinnerImg from "assets/Rolling-1s-200px.svg";
 
 const LoadingSpinner = () => {
 
