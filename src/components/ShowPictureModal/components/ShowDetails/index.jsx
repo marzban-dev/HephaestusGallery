@@ -8,7 +8,7 @@ const ShowDetails = ({picture}) => {
             year: picture.year,
             location: picture.location,
             type: picture.type,
-            painter: picture.painter
+            artist: picture.artist
         })
     },[]);
 
