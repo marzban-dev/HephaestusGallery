@@ -1,0 +1,58 @@
+.filter-box {
+    position: relative;
+}
+
+.filter-box-active .filter-box-button {
+    background-color: rgba(255, 255, 255, 0.82);
+    border-radius: 15px 15px 0 0;
+}
+
+.filter-box-active .filter-box-menu {
+    display: flex;
+}
+
+.filter-box-button {
+    background-color: rgba(255, 255, 255, 0.51);
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    width: 90px;
+    cursor: default;
+    transition: background-color 0.2s;
+}
+
+.filter-box-menu {
+    color: #000000;
+    position: absolute;
+    background-color: rgb(218, 218, 218);
+    list-style: none;
+    margin: 0;
+    width: 90px;
+    border-radius: 0 0 15px 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 300;
+    padding-bottom: 0.5rem;
+}
+
+.filter-box-menu li {
+    padding: 0.25rem 0;
+    margin: 0.15rem 0;
+    width: 70px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.filter-box-menu-item-active {
+    background-color: rgba(169, 90, 90, 0.21);
+}
+
+.filter-box-menu li:hover {
+    background-color: rgba(157, 157, 157, 0.37);
+}
