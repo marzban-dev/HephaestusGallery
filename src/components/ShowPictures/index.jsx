@@ -1,15 +1,17 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import LoadingSpinner from "components/LoadingSpinner";
 import StackGrid, {transitions} from "react-stack-grid";
 import PictureCard from "components/PictureCard";
 import {useNavigate} from "react-router-dom";
+import {TemplateContext} from "context/PicturesContext";
 
 const {scaleDown} = transitions;
 
 const ShowPictures = ({pictures, fetchData}) => {
     const navigate = useNavigate();
     const [columnWidth, setColumnWidth] = useState(300);
+    const {count} = useContext(TemplateContext);
 
     useEffect(() => {
         specifyColumnWidth()
@@ -40,11 +42,11 @@ const ShowPictures = ({pictures, fetchData}) => {
         <InfiniteScroll
             dataLength={pictures.length}
             next={fetchData}
-            hasMore={true}
+            hasMore={pictures.length < count}
             loader={<LoadingSpinner/>}
             scrollThreshold={1}
             endMessage={
-                <p style={{textAlign: 'center'}}>
+                <p style={{textAlign: 'center',color:"white"}}>
                     <b>Yay! You have seen it all</b>
                 </p>
             }
