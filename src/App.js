@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "components/Header";
 import {Route, Routes} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import ShowPicturePage from "./pages/ShowPicturePage";
+import HomePage from "pages/HomePage";
+import ShowPicturePage from "pages/ShowPicturePage";
 import Modal from "react-modal";
 import "./app.css";
 
