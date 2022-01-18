@@ -1,0 +1,15 @@
+.search-input {
+}
+
+.search-input input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1rem;
+}
+
+.search-input input:focus {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.58);
+}
