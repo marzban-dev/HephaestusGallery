@@ -14,12 +14,12 @@ const SearchBox = () => {
                 <SearchInput/>
                 <button
                     className="options-box-toggle-button"
-                    style={{
-                        transform : isOptionBoxOpen ? "rotateZ(90deg)" : "rotate(0)"
-                    }}
                     onClick={() => setIsOptionBoxOpen(!isOptionBoxOpen)}
                 >
-                    <img src={ArrowIcon} alt="arrow"/>
+                    <img
+                        style={{transform : isOptionBoxOpen ? "rotateZ(90deg)" : "rotate(0)"}}
+                        src={ArrowIcon} alt="arrow"
+                    />
                 </button>
             </div>
         </div>
