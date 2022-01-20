@@ -4,7 +4,6 @@ import {TemplateContext} from "context/PicturesContext";
 
 const FilterInput = () => {
     const {filter, setFilter, setSearch} = useContext(TemplateContext);
-    const [isFilterMenuOpen, setIsFilterMenuOpen] = useState(false);
 
     const renderFilters = () => {
         return ["Title", "Year", "Type", "Artist", "Location"].map((filterName, index) => (
@@ -12,7 +11,6 @@ const FilterInput = () => {
                 key={index}
                 onClick={() => {
                     setFilter(filterName);
-                    setIsFilterMenuOpen(false);
                     setSearch("");
                 }}
                 className={[
@@ -25,15 +23,8 @@ const FilterInput = () => {
     }
 
     return (
-        <div
-            className={[
-                "filter-box",
-                isFilterMenuOpen ? "filter-box-active" : null
-            ].join(" ")}
-            onMouseEnter={() => setIsFilterMenuOpen(true)}
-            onMouseLeave={() => setIsFilterMenuOpen(false)}
-        >
-            <button className="filter-box-button">{filter}</button>
+        <div className="filter-box">
+            <h3 className="filter-box-title">Filter By</h3>
             <ul className="filter-box-menu">
                 {renderFilters()}
             </ul>
