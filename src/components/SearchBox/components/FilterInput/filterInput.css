@@ -1,5 +1,6 @@
 .filter-box {
     position: relative;
+    width: 35%;
 }
 
 .filter-box-active .filter-box-button {
@@ -18,9 +19,8 @@
     outline: none;
     font-size: 1rem;
     padding: 0.5rem 0;
-    width: 90px;
+    width: 100%;
     cursor: default;
-    transition: background-color 0.2s;
 }
 
 .filter-box-menu {
@@ -29,7 +29,7 @@
     background-color: rgb(218, 218, 218);
     list-style: none;
     margin: 0;
-    width: 90px;
+    width: 100%;
     border-radius: 0 0 15px 15px;
     display: none;
     justify-content: center;
@@ -42,11 +42,17 @@
 .filter-box-menu li {
     padding: 0.25rem 0;
     margin: 0.15rem 0;
-    width: 70px;
+    width: 85%;
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.2s;
+}
+
+@media screen and (max-width: 600px) {
+    .filter-box-menu li, .filter-box-button {
+    font-size: 0.8rem;
+}
 }
 
 .filter-box-menu-item-active {
