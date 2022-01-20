@@ -8,6 +8,8 @@ const PicturesContext = ({children}) => {
     const [filter, setFilter] = useState("Title");
     const [search, setSearch] = useState("");
     const [count, setCount] = useState(0);
+    const [order, setOrder] = useState("?");
+    const [orderType, setOrderType] = useState("Asc");
 
     const value = {
         pictures,
@@ -17,7 +19,11 @@ const PicturesContext = ({children}) => {
         search,
         setSearch,
         count,
-        setCount
+        setCount,
+        order,
+        setOrder,
+        orderType,
+        setOrderType
     };
 
     return (
