@@ -38,6 +38,20 @@ const ShowPictures = ({pictures, fetchData}) => {
         })
     }
 
+    const noMoreResultContainerStyle = {
+        textAlign: 'center',
+        color: "white",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "1rem 0 5rem 0"
+    };
+    const noMoreResultParagraphStyle = {
+        border: "1px solid gray",
+        padding: "1rem 5rem",
+        borderRadius: "20px"
+    };
+
     return (
         <InfiniteScroll
             dataLength={pictures.length}
@@ -46,9 +60,11 @@ const ShowPictures = ({pictures, fetchData}) => {
             loader={<LoadingSpinner/>}
             scrollThreshold={1}
             endMessage={
-                <p style={{textAlign: 'center',color:"white"}}>
-                    <b>Yay! You have seen it all</b>
-                </p>
+                <div style={noMoreResultContainerStyle}>
+                    <p style={noMoreResultParagraphStyle}>
+                        {pictures.length === 0 ? "Nothing found" : "You have seen it all"}
+                    </p>
+                </div>
             }
             className="infinite-scroll-container"
         >
