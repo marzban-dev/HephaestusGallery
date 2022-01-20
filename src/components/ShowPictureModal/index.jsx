@@ -3,6 +3,8 @@ import Modal from "react-modal";
 import {REACT_MODAL_OPTIONS} from "config";
 import {useNavigate} from "react-router-dom";
 import ShowDetails from "components/ShowPictureModal/components/ShowDetails";
+import BackButton from "assets/back-svgrepo-com.svg";
+import "./showPictureModal.css";
 
 const ShowPictureModal = ({picture}) => {
     const navigate = useNavigate();
@@ -19,6 +21,9 @@ const ShowPictureModal = ({picture}) => {
             onRequestClose={() => closeModal()}
             {...REACT_MODAL_OPTIONS}
         >
+            <button className="modal-picture-back-button" onClick={() => closeModal()}>
+                <img src={BackButton} alt="back-button"/>
+            </button>
             {picture ? (
                 <React.Fragment>
                     <div className="modal-picture-container">
