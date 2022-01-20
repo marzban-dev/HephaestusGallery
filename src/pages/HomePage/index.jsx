@@ -6,18 +6,19 @@ import SearchBox from "components/SearchBox";
 import {TemplateContext} from "context/PicturesContext";
 
 const HomePage = () => {
-    const {pictures, setPictures, filter, search} = useContext(TemplateContext);
+    const {pictures, setPictures, filter, search, setCount} = useContext(TemplateContext);
 
     useEffect(() => {
         fetchPictures(25, pictures.length).then(({result, count}) => {
             let copyOfPictures = [...pictures];
             copyOfPictures = [...copyOfPictures, ...result];
             setPictures(copyOfPictures);
+            setCount(count);
         }).catch(error => console.log(error));
     }, []);
 
     const fetchData = () => {
-        fetchPictures(15, pictures.length, {filter, search}).then(({result, count}) => {
+        fetchPictures(15, pictures.length, {filter, search}).then(({result}) => {
             let copyOfPictures = [...pictures];
             copyOfPictures = [...copyOfPictures, ...result];
             setPictures(copyOfPictures);
