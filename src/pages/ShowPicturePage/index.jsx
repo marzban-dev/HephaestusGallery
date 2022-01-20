@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import {fetchPicture} from "api";
 import {useParams, useLocation} from "react-router-dom";
 import ShowPictureModal from "components/ShowPictureModal";
-import "./showPicturePage.css";
 
 const ShowPicturePage = () => {
     const {id} = useParams();
