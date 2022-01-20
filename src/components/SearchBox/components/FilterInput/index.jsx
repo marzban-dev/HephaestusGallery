@@ -7,8 +7,9 @@ const FilterInput = () => {
     const [isFilterMenuOpen, setIsFilterMenuOpen] = useState(false);
 
     const renderFilters = () => {
-        return ["Title", "Year", "Type", "Artist", "Location"].map(filterName => (
+        return ["Title", "Year", "Type", "Artist", "Location"].map((filterName, index) => (
             <li
+                key={index}
                 onClick={() => {
                     setFilter(filterName);
                     setIsFilterMenuOpen(false);
