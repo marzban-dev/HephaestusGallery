@@ -1,7 +1,7 @@
 import React from "react";
-import TwitterIcon from "assets/twitter-svgrepo-com.svg";
-import GithubIcon from "assets/github-svgrepo-com.svg";
-import ApiIcon from "assets/api-svgrepo-com.svg";
+import TwitterIcon from "../../../assets/twitter-svgrepo-com.svg";
+import GithubIcon from "../../../assets/github-svgrepo-com.svg";
+import ApiIcon from "../../../assets/api-svgrepo-com.svg";
 import "./socialMedia.css";
 
 const SocialMedia = () => {
