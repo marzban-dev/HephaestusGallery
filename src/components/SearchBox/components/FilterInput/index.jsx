@@ -20,7 +20,7 @@ const FilterInput = () => {
 
 
     const renderFilters = () => {
-        return ["Title", "Year", "Type", "Artist", "Location"].map((filterName, index) => (
+        return ["title", "year", "type", "artist", "location"].map((filterName, index) => (
             <li
                 key={index}
                 onClick={() => onFilterChanged(filterName)}
@@ -28,7 +28,7 @@ const FilterInput = () => {
                     filterName === filter ? "filter-box-menu-item-active" : null
                 ].join(" ")}
             >
-                {filterName}
+                {filterName.charAt(0).toUpperCase() + filterName.slice(1)}
             </li>
         ))
     }

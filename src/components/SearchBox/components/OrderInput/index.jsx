@@ -19,7 +19,7 @@ const SortInput = () => {
     }
 
     const renderSortOptions = () => {
-        return ["Artist", "Type", "Title", "Location", "Year"].map((orderName, index) => (
+        return ["artist", "type", "title", "location", "year"].map((orderName, index) => (
             <li
                 key={index}
                 onClick={() => onOrderChanged(orderName)}
@@ -27,7 +27,7 @@ const SortInput = () => {
                     orderName === order ? "order-box-menu-item-active" : null
                 ].join(" ")}
             >
-                {orderName}
+                {orderName.charAt(0).toUpperCase() + orderName.slice(1)}
             </li>
         ))
     }

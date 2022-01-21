@@ -1,5 +1,6 @@
 .options-box {
     position: absolute;
+    z-index:300;
     top: -200px;
     left: 0;
     width: 100%;

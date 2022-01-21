@@ -6,7 +6,7 @@ export const TemplateContext = createContext({});
 const PicturesContext = ({children}) => {
 
     const [pictures, setPictures] = useState([]);
-    const [filter, setFilter] = useState("Title");
+    const [filter, setFilter] = useState("title");
     const [search, setSearch] = useState("");
     const [count, setCount] = useState(0);
     const [order, setOrder] = useState("?");
