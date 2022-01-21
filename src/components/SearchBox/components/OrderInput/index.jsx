@@ -1,24 +1,33 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import {TemplateContext} from "context/PicturesContext";
 import "./orderInput.css";
 
 const SortInput = () => {
+    const {order, setOrder, fetchData, orderType, setOrderType} = useContext(TemplateContext);
+    const [timerID, setTimerId] = useState(null);
 
-    const {order, setOrder, setSearch, orderType, setOrderType} = useContext(TemplateContext);
+    const onOrderChanged = (orderName = null, orderTypeName = null) => {
+
+        if (orderName) setOrder(orderName)
+        if (orderTypeName) setOrderType(orderTypeName)
+
+        if (timerID) clearTimeout(timerID);
+
+        setTimerId(
+            setTimeout(() => fetchData(25, 0, true), 1200)
+        );
+    }
 
     const renderSortOptions = () => {
-        return ["Artist", "Type", "Title", "Location", "Year"].map((orderTitle, index) => (
+        return ["Artist", "Type", "Title", "Location", "Year"].map((orderName, index) => (
             <li
                 key={index}
-                onClick={() => {
-                    setOrder(orderTitle);
-                    setSearch("");
-                }}
+                onClick={() => onOrderChanged(orderName)}
                 className={[
-                    orderTitle === order ? "order-box-menu-item-active" : null
+                    orderName === order ? "order-box-menu-item-active" : null
                 ].join(" ")}
             >
-                {orderTitle}
+                {orderName}
             </li>
         ))
     }
@@ -30,8 +39,7 @@ const SortInput = () => {
                 <div className="order-box-head-asc-or-desc">
                     <span
                         onClick={() => {
-                            setOrderType("Asc");
-                            setSearch("");
+                            if (order !== "?") onOrderChanged(null, "Asc");
                         }}
                         className={orderType === "Asc" ? "order-box-head-asc-or-desc-item-active" : null}
                     >
@@ -39,8 +47,7 @@ const SortInput = () => {
                     </span>
                     <span
                         onClick={() => {
-                            setOrderType("Desc");
-                            setSearch("");
+                            if (order !== "?") onOrderChanged(null, "Desc");
                         }}
                         className={orderType === "Desc" ? "order-box-head-asc-or-desc-item-active" : null}
                     >

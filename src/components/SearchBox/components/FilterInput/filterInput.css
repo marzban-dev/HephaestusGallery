@@ -20,6 +20,13 @@
     z-index: 300;
     padding: 0.5rem;
     border-radius: 20px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.filter-box-menu::-webkit-scrollbar {
+    display: none;
 }
 
 .filter-box-menu li {
@@ -38,8 +45,10 @@
     }
 }
 
-.filter-box-menu-item-active {
-    background-color: rgba(203, 51, 51, 0.23);
+.filter-box-menu-item-active,
+.filter-box-menu-item-active:hover,
+.filter-box-menu-item-active:focus {
+    background-color: rgba(203, 51, 51, 0.23) !important;
 }
 
 .filter-box-menu li:hover {

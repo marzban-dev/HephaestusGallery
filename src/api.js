@@ -1,10 +1,10 @@
 import axios from "axios";
 
-export const fetchPictures = async (limit, offset, searchObj) => {
-
+export const fetchPictures = async (limit, offset, searchObj = {}) => {
+    console.log(searchObj);
     const filterObject = {};
 
-    if (searchObj && searchObj.search.length !== 0) {
+    if (searchObj.search && searchObj.search.length !== 0) {
         filterObject[`${searchObj.filter.toLowerCase()}__contains`] = searchObj.search;
     }
 
@@ -14,7 +14,8 @@ export const fetchPictures = async (limit, offset, searchObj) => {
                 format: "json",
                 limit,
                 offset,
-                ...filterObject
+                ...filterObject,
+                ordering: searchObj.order
             }
         });
 

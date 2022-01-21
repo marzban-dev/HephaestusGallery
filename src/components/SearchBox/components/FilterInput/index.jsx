@@ -1,18 +1,29 @@
-import React, {useState, useContext} from "react";
-import "./filterInput.css"
+import React, {useContext, useState} from "react";
 import {TemplateContext} from "context/PicturesContext";
+import "./filterInput.css"
 
 const FilterInput = () => {
-    const {filter, setFilter, setSearch} = useContext(TemplateContext);
+    const {filter, setFilter, fetchData, search} = useContext(TemplateContext);
+    const [timerID, setTimerId] = useState(null);
+
+    const onFilterChanged = (filterName) => {
+        setFilter(filterName)
+
+        if (timerID) clearTimeout(timerID);
+
+        if (search.length !== 0) {
+            setTimerId(
+                setTimeout(() => fetchData(25, 0, true), 1200)
+            );
+        }
+    }
+
 
     const renderFilters = () => {
         return ["Title", "Year", "Type", "Artist", "Location"].map((filterName, index) => (
             <li
                 key={index}
-                onClick={() => {
-                    setFilter(filterName);
-                    setSearch("");
-                }}
+                onClick={() => onFilterChanged(filterName)}
                 className={[
                     filterName === filter ? "filter-box-menu-item-active" : null
                 ].join(" ")}
