@@ -10,9 +10,9 @@ const Header = () => {
             <h1 className="header-title">Hephaestus Gallery</h1>
             <div className="header-about">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magni nam, eligendi pariatur aliquid quam dolorum ratione
-                    amet minus magnam, veniam laborum, deserunt vero modi!
+                    The Hephaestus Gallery is a virtual museum and searchable database of European fine arts,
+                    decorative arts, and architecture (3rd-19th centuries), currently containing over 52.800 reproductions.
+                    Thanks to <a href="https://www.wga.hu/">"Web Gallery of Art"</a> we used their database and created a whole new website.
                 </p>
             </div>
         </header>

@@ -47,6 +47,12 @@
     font-size: 32px;
 }
 
+.header-about p a {
+    text-decoration: none;
+    color: #D8C0A7;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 600px) {
     .header-title {
         font-size: 70px;
