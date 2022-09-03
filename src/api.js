@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const fetchPictures = async (limit, offset, searchObj = {}) => {
-    console.log(searchObj);
     const filterObject = {};
 
     if (searchObj.search && searchObj.search.length !== 0) {

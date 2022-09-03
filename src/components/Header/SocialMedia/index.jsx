@@ -32,7 +32,7 @@ const SocialMedia = () => {
   return (
     <div className="social-media">
       <div className="social-media-github">
-        <a href="https://github.com/X-Dark-Coder" className="social-media-github-item" title="Mansour">
+        <a href="https://github.com/marzban.dev" className="social-media-github-item" title="Mansour">
           <img src="https://avatars.githubusercontent.com/u/84951627?v=4" alt="X-Dark-Coder Github" />
         </a>
         <a href="https://github.com/nimiology" className="social-media-github-item" title="Nima">

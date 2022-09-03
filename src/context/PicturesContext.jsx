@@ -26,7 +26,6 @@ const PicturesContext = ({children}) => {
 
     const fetchData = async (limit, offset, replace = false) => {
         try {
-            // console.log(orderTypeRef.current === "Asc" ? orderRef.current : "-" + orderRef.current);
             const {result, count} = await fetchPictures(
                 limit,
                 offset,
